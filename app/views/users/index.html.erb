@@ -1,0 +1,23 @@
+<h1>Users</h1>
+<%= will_paginate(:renderer => WillPaginate::ActionView::Bootstrap4LinkRenderer, class: 'pagination-sm') %>
+    <table>
+      <thead>
+        <tr>
+          <th>Username</th>
+          <th>Gender</th>
+          <th>Headline</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= link_to user.username, user %></td>
+            <td><%= user.sex %></td>
+            <td><%= user.headline %></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+

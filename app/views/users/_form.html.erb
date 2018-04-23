@@ -1,0 +1,20 @@
+<%= simple_form_for(@user, html: { class: 'form-horizontal' }) do |user| %>
+	<%= user.input :fname, label: "First name" %>
+	<%= user.input :lname, label: "Last name" %>
+	<%= user.input :username %>
+	<%= user.input :email %>
+	<%= user.input :password %>
+	<%= user.input :password_confirmation %>
+	<%= user.input :street, label: "Street Address" %>
+	<%= user.input :city %>
+	<%= user.input :state %>
+	<%= user.input :zip_code %>
+	<%= user.input :looking_for %>
+	<span>What is your sex?</span><br>
+	<%= user.radio_button :sex, 'Male' %> Male
+	<%= user.radio_button :sex, 'Female' %> Female <br /><br />
+	<%= user.input :headline %>
+	<%= user.input :description %>
+	<%= user.submit %>
+
+<% end %>
