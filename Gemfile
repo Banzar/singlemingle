@@ -52,13 +52,7 @@ group :development, :test do
   gem 'sqlite3'
 end
 
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
-end
-
 group :production do
-  gem 'web-console', '>= 3.3.0'
 	gem 'rails_12factor'
 	gem 'pg', '~> 0.18.4'
 	gem 'thin'
